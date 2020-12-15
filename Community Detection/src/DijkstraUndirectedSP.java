@@ -1,8 +1,3 @@
-/*07gençlik
- * 115200079
- * 115200083
- */
-
 import java.awt.RenderingHints.Key;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -152,13 +147,13 @@ public class DijkstraUndirectedSP {
     }
     //FIND ALL SHORTEST PATHS
     private static SeparateChainingHashST<Tuple, Tuple2> findAllShortestPaths(EdgeWeightedGraph G){
-    	SeparateChainingHashST<Tuple, Tuple2>sp=new SeparateChainingHashST<Tuple,Tuple2>();
+    	SeparateChainingHashST<Tuple, Tuple2>sp = new SeparateChainingHashST<Tuple,Tuple2>();
     	
     	for (int i = 0; i < G.V(); i++) {
-			DijkstraUndirectedSP path=new DijkstraUndirectedSP(G, i);
+			DijkstraUndirectedSP path = new DijkstraUndirectedSP(G, i);
 			for (int j = 0; j < G.V(); j++) {
 				if(j!=i){
-					if(path.hasPathTo(j)==false){
+					if(path.hasPathTo(j) == false){
 						continue;
 					}
 				Tuple myTuple=new Tuple(i,j);
@@ -171,7 +166,7 @@ public class DijkstraUndirectedSP {
     }
     //GET EDGES FROM PATH
     private static ArrayList<Edge>  getEdgesFromPath(Iterable<Edge>path){
-    	edges=new ArrayList<Edge>();
+    	edges = new ArrayList<Edge>();
     	for (Edge e : path) {
 			edges.add(e);
 		}
@@ -199,7 +194,7 @@ public class DijkstraUndirectedSP {
     private static Edge getEdgeWithMaxSP(EdgeWeightedGraph G){
     	SeparateChainingHashST<Edge, Integer> onsp = new SeparateChainingHashST<Edge,Integer>();
     	onsp = numberOfShortestPathsPassingThroughEdges(G);
-    	ArrayList<Integer>sortList=new ArrayList<>();
+    	ArrayList<Integer>sortList = new ArrayList<>();
     	Edge edgeMaxSP= new Edge(0, 0, 0);
     	for (Edge edge : onsp.keys()) {
     		sortList.add(onsp.get(edge));
@@ -230,15 +225,15 @@ public class DijkstraUndirectedSP {
  	    EdgeWeightedGraph graph = sg.graph();
  	    DijkstraUndirectedSP myPath = new DijkstraUndirectedSP(graph, 0);
  	    
- 	   for (int i = 1; i <= 9; i++) {
+ 	   for (int i = 1; i <= 10; i++) {
 			removeMax(graph);
 			myPath = new DijkstraUndirectedSP(graph, 0);
 			CC numberOfComponents = new CC(graph);
 			System.out.println(+i+"th"+" Removal"+" Number of Components:"+" "+numberOfComponents.count());
-			System.out.println(sg.nameOf(getEdgeWithMaxSP(graph).either())+" - "+sg.nameOf(getEdgeWithMaxSP(graph).other(getEdgeWithMaxSP(graph).either()))+" "+getEdgeWithMaxSP(graph).weight());
+			System.out.println(sg.nameOf(getEdgeWithMaxSP(graph).either()) + " - " + sg.nameOf(getEdgeWithMaxSP(graph).other(getEdgeWithMaxSP(graph).either())) + " " + getEdgeWithMaxSP(graph).weight());
 			System.out.println(numberOfShortestPathsPassingThroughEdges(graph).get(getEdgeWithMaxSP(graph)));
-			if(i==10){
-				System.out.println(numberOfComponents.count()+" "+"Communities are found.");
+			if(i == 10){
+				System.out.println(numberOfComponents.count() + " " + "Communities are found.");
 			}
     }
     
