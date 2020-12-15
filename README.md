@@ -15,6 +15,6 @@ Most of the supplementary codes are taken from https://algs4.cs.princeton.edu/co
 
 The main implementation is in [DijkstraUndirectedSP.java](../master/Community%20Detection/src/DijkstraUndirectedSP.java)
 
-## Example animation:
+## Example Animation:
 
 ![Alt Text](https://media.giphy.com/media/8FF7aL37fO1zX7v4iT/giphy.gif)
