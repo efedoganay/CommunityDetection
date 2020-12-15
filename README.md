@@ -1,4 +1,4 @@
-# CommunityDetection
+# Community Detection
 
 ## Steps Involved:
 
