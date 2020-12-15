@@ -13,7 +13,7 @@
 
 Most of the supplementary codes are taken from https://algs4.cs.princeton.edu/code/
 
-The main implementation is in [DijkstraUndirectedSP.java](../src/DijkstraUndirectedSP.java)
+The main implementation is in [DijkstraUndirectedSP.java](../master/Community%20Detection/src/DijkstraUndirectedSP.java)
 
 ## Example animation:
 
