@@ -6,7 +6,7 @@
 
 2. Repeat 10 Times:
     - Find shortest path between every pair in G, using Dijkstra's shortest path algorithm.
-    - For every edge, count the number of shortest paths passing through that edge.
+    - For every edge, count the number of shortest paths passing through.
     - Find and remove the edge on which the maximum number of shortest paths pass.
    
 ## Notes:
