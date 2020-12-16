@@ -4,8 +4,10 @@
 
 1. Import the data from https://moviegalaxies.com/movies/download/92/Babel
 
-2. Repeat 10 Times:
-    - Find shortest path between every pair in G, using Dijkstra's shortest path algorithm.
+2. Create the graph.
+
+3. Repeat 10 Times:
+    - Find shortest path between every pair in the graph, using Dijkstra's shortest path algorithm.
     - For every edge, count the number of shortest paths passing through.
     - Find and remove the edge on which the maximum number of shortest paths pass.
    
