@@ -19,4 +19,6 @@ The main implementation is in [DijkstraUndirectedSP.java](../master/Community%20
 
 ## Example Animation:
 
-![Alt Text](https://media.giphy.com/media/8FF7aL37fO1zX7v4iT/giphy.gif)
+<p align="center">
+  <img src="https://media.giphy.com/media/8FF7aL37fO1zX7v4iT/giphy.gif" alt="animated" />
+</p>
